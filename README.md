@@ -1,6 +1,6 @@
 # Quiz CLI
 
-An interactive command-line quiz game for learning JavaScript, Node.js, and general programming concepts. The application runs entirely on Node.js built-ins, presents a menu-driven terminal experience, randomizes questions, evaluates answers immediately, and provides a score summary with review guidance.
+An interactive command-line quiz game for learning JavaScript, Node.js, and general programming concepts. The application runs entirely on Node.js built-ins, presents a menu-driven terminal experience, randomizes questions, evaluates answers immediately, and provides a score summary with review guidance. The bundled question bank contains 15 questions across three categories.
 
 ## Features
 
@@ -34,7 +34,7 @@ git clone <repository-url>
 cd test-app
 ```
 
-There are no package dependencies to install. If you want npm to process the project manifest, run:
+There are no package dependencies to install, so `npm install` is not required to run the application. Running it is harmless if you want npm to validate the manifest or create local package metadata:
 
 ```bash
 npm install
@@ -73,7 +73,7 @@ The package defines the following test command:
 npm test
 ```
 
-It runs Node.js's built-in test runner with `node --test`. No test files are currently included in the repository, so the command may complete without executing tests.
+It runs Node.js's built-in test runner with `node --test`. No test files are currently included in the repository, so this command currently serves as the configured test entry point but may complete without executing any tests.
 
 ## Question data
 
@@ -117,6 +117,8 @@ To add or change quiz content, edit the JSON while preserving this structure. Th
 ## Configuration and environment
 
 The repository does not define environment variables, configuration files, databases, network services, authentication, or external APIs. Quiz content is local JSON data and is read at runtime from the repository's `data` directory.
+
+The application does not accept command-line flags or positional arguments. Its interaction is performed through the prompts shown after `npm start`.
 
 ## License
 
